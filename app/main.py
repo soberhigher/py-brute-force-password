@@ -21,7 +21,7 @@ def sha256_hash_str(to_hash: str) -> str:
     return sha256(to_hash.encode("utf-8")).hexdigest()
 
 
-def range_numbers(start: int, end: int):
+def range_numbers(start: int, end: int) -> None:
     for number in range(start, end):
         fill = str(number).zfill(8)
         result = sha256_hash_str(fill)
